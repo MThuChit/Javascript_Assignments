@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-</head>
-<body>
+<html>
+
+  <body>
+
     <ul id="list1"></ul>
+
     <script>
-        for (let i = 1; i <= 20; i++) {
-            if (i % 5 == 0) {
+
+      for (let i = 1; i <= 20; i++) {
+            if ((i % 5 == 0) && (i != 20)) {
                 continue;
-            }
-            else if (i = 20) {
-                console.log("List: ", i);
             }
             else {
                 console.log("List: ", i);
             }
+            document.getElementById("list1").innerHTML += `<ul>${i}</ul>`;
         }
+
     </script>
-</body>
+
+  </body>
+
 </html>
