@@ -28,69 +28,86 @@
           <th>EXP</th>
           <td id="td-monster-exp"></td>
         </tr>
+        <tr>
+          <th>Image</th>
+            <td id="td-monster-img"></td>
+        </tr>
       </table>
+      <img id="monster-img" src="" alt="Monster Image" width="200" style="border:1px solid #000;">
+
     </div>
+    <hr/>
     <script>
       const monsters = [
         {
           "id": 1,
           "name": "Fire Dragon",
           "hp": 150,
-          "exp": 85
+          "exp": 85,
+          "img": "images/Fire Dragon.jpg"
         },
         {
           "id": 2,
           "name": "Ice Wolf",
           "hp": 75,
-          "exp": 45
+          "exp": 45,
+          "img": "images/Ice Wolf.jpg"
         },
         {
           "id": 3,
           "name": "Shadow Goblin",
           "hp": 40,
-          "exp": 25
+          "exp": 25,
+          "img": "images/Shadow Goblin.jpg"
         },
         {
           "id": 4,
           "name": "Lightning Phoenix",
           "hp": 200,
-          "exp": 120
+          "exp": 120,
+          "img": "images/Lightning Phoenix.jpg"
         },
         {
           "id": 5,
           "name": "Earth Golem",
           "hp": 180,
-          "exp": 95
+          "exp": 95,
+          "img": "images/Earth Golem.jpg"
         },
         {
           "id": 6,
           "name": "Poison Spider",
           "hp": 60,
-          "exp": 35
+          "exp": 35,
+          "img": "images/Poison Spider.jpg"
         },
         {
           "id": 7,
           "name": "Wind Eagle",
           "hp": 90,
-          "exp": 55
+          "exp": 55,
+          "img": "images/Wind Eagle.jpg"
         },
         {
           "id": 8,
           "name": "Dark Skeleton",
           "hp": 65,
-          "exp": 40
+          "exp": 40,
+          "img": "images/Dark Skeleton.jpg"
         },
         {
           "id": 9,
           "name": "Crystal Unicorn",
           "hp": 120,
-          "exp": 75
+          "exp": 75,
+          "img": "images/Crystal Unicorn.jpg"
         },
         {
           "id": 10,
           "name": "Lava Titan",
           "hp": 250,
-          "exp": 150
+          "exp": 150,
+          "img": "images/Lava Titan.jpg"
         }
       ];
         const monsterList = document.getElementById("monster-list");
@@ -99,6 +116,7 @@
             option.value = index;
             option.text = monster.name;
             monsterList.appendChild(option);
+
         });
         monsterList.addEventListener("change", function() {
             const selectedMonster = monsters[this.value];
@@ -106,6 +124,8 @@
             document.getElementById("td-monster-name").innerText = selectedMonster.name;
             document.getElementById("td-monster-hp").innerText = selectedMonster.hp;
             document.getElementById("td-monster-exp").innerText = selectedMonster.exp;
+            document.getElementById("monster-img").src = selectedMonster.img;
+
         });
     </script>
   </body>
